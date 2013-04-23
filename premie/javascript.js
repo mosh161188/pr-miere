@@ -1,67 +1,50 @@
 $(document).ready(function() {
-
+	var columns;
 	var handler = $('#tiles li');
 	var options = {
         autoResize: true, // This will auto-update the layout when the browser window is resized.
         container: $('#feed'), // Optional, used for some extra CSS styling
         offset: 2, // Optional, the distance between grid items
+        resizeDelay: 0,
         itemWidth: 210 // Optional, the width of a grid item
       };
+      
       // Call the layout function.
       handler.wookmark(options);
-      handler.wookmark();
-      jsonFlickrApi();
- 
-	 $('.navbarprofile').mouseover(function() {
-	  showProfileDropdown();
-	 });
- 
- 	$("body").click(function(){
-	 	hideProfileDropdown();
- 	 });
-	
-	// Prevent events from getting pass .popup
-	$(".navbarprofile").click(function(e){
-	  e.stopPropagation();
+      alignNavigation();
+      $(window).resize(function() {
+      		  alignNavigation();
 	});
+      
+ });
  
-});
-
-function showProfileDropdown(){
-	var parent = $('.navbarprofile');
-	$('.navbarprofile').css({'height':'145px'});
-	$('.dropdownbox').css({'visibility':'visible'});
-}
-
-function hideProfileDropdown(){
-	$('.navbarprofile').css({'height':'38px'});
-	$('.dropdownbox').css({'visibility':'hidden'});
-}
-
-function jsonFlickrApi(rsp) {
- if (rsp.stat != "ok"){
-  return;
+ function alignNavigation(){
+	 	columns = $('#feed').width()/210;
+      	columns = Math.floor(columns);
+		$('.centerit').css({'width':columns * 210});
  }
  
- var s = "";
- var i = Math.random();
- i = i * 100;
- i = Math.ceil(i);
+ function clickOnImage(back){
+ 	 if(back == "out"){
+	 	$('body').css({'overflow':'auto'});
+	 	$('#bla').css({'visibility':'hidden'});
+ 	 }
+ 	 else{
+ 	 	$('body').css({'overflow':'hidden'});
+ 	 	
+	 	$('#bla').css({'top':$(document).scrollTop(),'visibility':'visible'});
+	 }
+ }
  
- photo = rsp.photos.photo[ i ];
- 
- t_url = "http://farm" + photo.farm +
- ".static.flickr.com/" + photo.server + "/" +
- photo.id + "_" + photo.secret + "_" + "m.jpg";
- 
- p_url = "http://www.flickr.com/photos/" +
- photo.owner + "/" + photo.id;
- 
- s =  '<img alt="'+ photo.title + '"src="' + t_url + '"/>'  ;
- 
- 
- document.writeln(s);
- //this tells the JavaScript to write
- //everything in variable "s" onto the page
- 
-}
+ function showSearch(){
+ 	 if(columns <= 3){
+	 	$('#bigsearch').css('visibility','visible').hide().fadeIn('slow');	 
+	 	$('#bigsearch input').focus();
+ 	 }
+ 	 else{
+		 $('#searchbar img').fadeOut(function(){
+		 	$('#searchbar input').css('visibility','visible').hide().fadeIn('slow');
+		 	$('#searchbar input').focus();
+		 });	 
+ 	 }
+ }

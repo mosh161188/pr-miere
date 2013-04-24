@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	
 	var columns;
 	var handler = $('#tiles li');
 	var options = {
@@ -11,17 +12,44 @@ $(document).ready(function() {
       
       // Call the layout function.
       handler.wookmark(options);
+      
+      var options2 = {
+      	align: 'left',
+        autoResize: true, // This will auto-update the layout when the browser window is resized.
+        container: $('#profilefeed'), // Optional, used for some extra CSS styling
+        offset: 2, // Optional, the distance between grid items
+        resizeDelay: 0,
+        itemWidth: 210 // Optional, the width of a grid item
+      };
+      
+      // Call the layout function.
+      $('#tiles li').wookmark(options2);
+      
+      
+      
       alignNavigation();
+      setWidth();
+      
       $(window).resize(function() {
       		  alignNavigation();
 	});
       
+      
  });
  
  function alignNavigation(){
-	 	columns = $('#feed').width()/210;
+	 	columns = $(document).width()/210;
       	columns = Math.floor(columns);
 		$('.centerit').css({'width':columns * 210});
+ }
+ 
+ function setWidth(){
+ 	var contentWidth = $('#content').width();
+ 	var p = (contentWidth / 100);
+ 	var result = 412 / p;
+ 	var result = 100 - result-5;
+	 $('#profilefeed').css({'width': result+'%'});
+	 //alert(result);
  }
  
  function clickOnImage(back){

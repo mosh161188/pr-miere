@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Premie</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" language="javascript"
+src="http://api.flickr.com/services/rest/?format=json&sort=randommethod=flickr.photos.search&tags=japan,food&tag_mode=allapi_key=66c61b93c4723c7c3a3c519728eac252">
+</script>
+		<script src="javascript.js"></script>
+		<script src="jquery.wookmark.js"></script>
+		<script type="text/javascript">
+			
+		</script>
+	</head>
+	<body>
+	<div id="bla" onclick="clickOnImage('out')">
+		<div class="center960">
+			<div class="container">
+				
+			</div>
+		</div>
+	</div>
+		<header>
+			<div class="centerit">
+						<div class="logo">
+							Logo
+						</div>
+						<a href="#" class="navbarbutton">Home</a>
+						<a href="#" class="navbarbutton">Discover</a>
+						<a href="#" class="navbarbutton">Offers</a>
+						
+						<div class="accountbutton">
+						<img src="images/profile.gif">
+						</div>
+						
+						<div id="searchbar">
+							<img src="images/search.png" onclick="showSearch()">
+							<input type="text" value="Search">
+						</div>
+						
+						<a href="#" class="newProjectButton">
+							Start a new Project
+						</a>
+			</div>
+			<div style="clear: both;"></div>
+		</header>
+		<div id="bigsearch">
+				<div class="centerit">
+					<input type="text" value="Search">
+				</div>
+			</div>
+		<div id="content">
+				<div class="centerit">
+					<div id="profilwrapper">
+						<div id="titlecover">
+							<img src="images/no.jpg" width="75" class="profileImageProfile">
+						</div>
+						<span class="profilename">BITCH MUSTERMANN</span>
+						<br><br><br><br>
+							<div class="profileinformation">
+								Woher:<br>
+								Job:<br>
+								Firma:<br>
+							</div>
+					</div>  
+				
+				<div id="profilefeed">
+				        <!-- These are our grid blocks -->
+				        <ul id="tiles">
+				        <li><img src="images/examples/image_1.jpg" width="200" height="283" onclick="clickOnImage()"><p>1</p></li>
+				        <li><img src="images/examples/image_2.jpg" width="200" height="300" onclick="clickOnImage()"><p>2</p></li>
+				        <li><img src="images/examples/image_3.jpg" width="200" height="252" onclick="clickOnImage()"><p>3</p></li>
+				        <li><img src="images/examples/image_4.jpg" width="200" height="158" onclick="clickOnImage()"><p>4</p></li>
+				        <li><img src="images/examples/image_5.jpg" width="200" height="300" onclick="clickOnImage()"><p>5</p></li>
+				        <li><img src="images/examples/image_6.jpg" width="200" height="297"onclick="clickOnImage()"><p>6</p></li>
+				        <li><img src="images/examples/image_7.jpg" width="200" height="200" onclick="clickOnImage()"><p>7</p></li>
+				        <li><img src="images/examples/image_8.jpg" width="200" height="200" onclick="clickOnImage()"><p>8</p></li>
+				        <li><img src="images/examples/image_9.jpg" width="200" height="398" onclick="clickOnImage()"><p>9</p></li>
+				        <li><img src="images/examples/image_10.jpg" width="200" height="267" onclick="clickOnImage()"><p>10</p></li>
+				        <li><img src="images/examples/image_1.jpg" width="200" height="283" onclick="clickOnImage()"><p>1</p></li>
+				        <li><img src="images/examples/image_2.jpg" width="200" height="300" onclick="clickOnImage()"><p>2</p></li>
+				        <li><img src="images/examples/image_3.jpg" width="200" height="252" onclick="clickOnImage()"><p>3</p></li>
+				        <li><img src="images/examples/image_4.jpg" width="200" height="158" nclick="clickOnImage()"><p>4</p></li>
+				        <li><img src="images/examples/image_5.jpg" width="200" height="300" onclick="clickOnImage()"><p>5</p></li>
+				        <li><img src="images/examples/image_6.jpg" width="200" height="297" onclick="clickOnImage()"><p>6</p></li>
+				        <li><img src="images/examples/image_7.jpg" width="200" height="200" onclick="clickOnImage()"><p>7</p></li>
+				        <li><img src="images/examples/image_8.jpg" width="200" height="200" onclick="clickOnImage()"><p>8</p></li>
+				        <li><img src="images/examples/image_9.jpg" width="200" height="398" onclick="clickOnImage()"><p>9</p></li>
+				        <li><img src="images/examples/image_10.jpg" width="200" height="267" onclick="clickOnImage()"><p>10</p></li>
+				        <li><img src="images/examples/image_1.jpg" width="200" height="283" onclick="clickOnImage()"><p>1</p></li>
+				        <li><img src="images/examples/image_2.jpg" width="200" height="300" onclick="clickOnImage()"><p>2</p></li>
+				        <li><img src="images/examples/image_3.jpg" width="200" height="252" onclick="clickOnImage()"><p>3</p></li>
+				        <li><img src="images/examples/image_4.jpg" width="200" height="158" onclick="clickOnImage()"><p>4</p></li>
+				        <li><img src="images/examples/image_5.jpg" width="200" height="300" onclick="clickOnImage()"><p>5</p></li>
+				        <li><img src="images/examples/image_6.jpg" width="200" height="297"onclick="clickOnImage()"><p>6</p></li>
+				        <li><img src="images/examples/image_7.jpg" width="200" height="200" onclick="clickOnImage()"><p>7</p></li>
+				        <li><img src="images/examples/image_8.jpg" width="200" height="200" onclick="clickOnImage()"><p>8</p></li>
+				        <li><img src="images/examples/image_9.jpg" width="200" height="398" onclick="clickOnImage()"><p>9</p></li>
+				        <li><img src="images/examples/image_10.jpg" width="200" height="267" onclick="clickOnImage()"><p>10</p></li>
+				        <li><img src="images/examples/image_1.jpg" width="200" height="283" onclick="clickOnImage()"><p>1</p></li>
+				        <li><img src="images/examples/image_2.jpg" width="200" height="300" onclick="clickOnImage()"><p>2</p></li>
+				        <li><img src="images/examples/image_3.jpg" width="200" height="252" onclick="clickOnImage()"><p>3</p></li>
+				        <li><img src="images/examples/image_4.jpg" width="200" height="158" nclick="clickOnImage()"><p>4</p></li>
+				        <li><img src="images/examples/image_5.jpg" width="200" height="300" onclick="clickOnImage()"><p>5</p></li>
+				        <li><img src="images/examples/image_6.jpg" width="200" height="297" onclick="clickOnImage()"><p>6</p></li>
+				        <li><img src="images/examples/image_7.jpg" width="200" height="200" onclick="clickOnImage()"><p>7</p></li>
+				        <li><img src="images/examples/image_8.jpg" width="200" height="200" onclick="clickOnImage()"><p>8</p></li>
+				        <li><img src="images/examples/image_9.jpg" width="200" height="398" onclick="clickOnImage()"><p>9</p></li>
+				        <li><img src="images/examples/image_10.jpg" width="200" height="267" onclick="clickOnImage()"><p>10</p></li>
+				        				        <!-- End of grid blocks -->
+				      </ul>
+				  </div>
+				</div>
+				<div style="clear:both"></div>
+			</div>
+	</body>
+</html>
